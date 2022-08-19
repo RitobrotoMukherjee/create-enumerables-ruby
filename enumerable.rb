@@ -2,7 +2,9 @@ module Myenumerable
   def any?
     rt = false
 
-    each { |item| rt = true if yield item }
+    each do |item|
+      rt = true if yield item
+    end
 
     rt
   end
@@ -11,6 +13,17 @@ module Myenumerable
     rt = true
 
     each { |item| rt = false unless yield item }
+
+    rt
+  end
+
+  def filter
+    rt = []
+    return rt.to_enum unless block_given?
+
+    each do |item|
+      rt.push(item) if yield item
+    end
 
     rt
   end
