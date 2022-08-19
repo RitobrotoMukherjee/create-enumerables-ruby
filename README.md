@@ -2,7 +2,7 @@
 
 # Create Enumerable
 
-> In this project I am using Ruby to re-create a few of it's in-built Enumerable. I am following **GitHub Flow** here. It's a personal project.
+> In this project I am using Ruby to re-create a few of it's in-built Enumerable. I am following **GitHub Flow** here. It's a personal project. It has proper error handling as mentioned in the [documentation](https://ruby-doc.org/core-3.0.0/Enumerable.html).
 
 
 ## Built With
