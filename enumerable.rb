@@ -1,20 +1,20 @@
 module Myenumerable
   def any?
-    rt = false
+    return 'No block supplied' unless block_given?
 
     each do |item|
-      rt = true if yield item
+      return true if yield item
     end
 
-    rt
+    false
   end
 
   def all?
-    rt = true
+    return 'No block supplied' unless block_given?
 
-    each { |item| rt = false unless yield item }
+    each { |item| return false unless yield item }
 
-    rt
+    true
   end
 
   def filter
